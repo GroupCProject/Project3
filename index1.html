@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IT Crowd Quote Generator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <a href=""><img src="FeedbackBox.svg" class="img-fluid" alt="Feedback Box" width="250"></a>
+</div>
+  
+<div class="container">
+  <!--form --> 
+  <form method="post" action="php/quoteProcessor.php">
+    
+    <div class="form-group">
+      <label for="module">Character: </label>
+      <select class="custom-select" id="module" name="module">
+          <option value="WAD">Roy</option>
+          <option value="AI">Moss</option>
+          <option value="BDA">Douglas</option>
+      </select>
+     </div>
+    
+    <input id="submit" name="submit" type="submit" value="Drop into Box" class="btn btn-primary">
+</form>
+</div>
+
+</body>
+</html>
