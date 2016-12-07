@@ -2,7 +2,8 @@
 // PHP code goes here
 echo "Hello from PHP!"
   
-
+?>
+<?php
 if (isset($_POST['submit'])) {
       $module = $_POST['module'];
       $semester = $_POST['semester'];
