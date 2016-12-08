@@ -1,29 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>IT Crowd Quote Generator</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.button').click(function(){
+        var clickBtnValue = $(this).val();
+        var ajaxurl = 'php/quoteProcessor.php',
+        data =  {'action': clickBtnValue};
+        $.post(ajaxurl, data, function (response) {
+            // Response div goes here.
+            alert("action performed successfully");
+        });
+    });
+
+});
+  </script>
 </head>
 <body>
 
 <div class="jumbotron text-center">
-  <a href=""><img src="FeedbackBox.svg" class="img-fluid" alt="Feedback Box" width="250"></a>
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
 </div>
   
 <div class="container">
- <?php
-
-      $xml = simplexml_load_file("./data/quotes.xml") or die("ERROR: Cannot load quotes.xml.");
-
-     
-
-       echo $xml->quote[0] . "<br>";
-      ?>
-  
+  <div class="row">
+    <div class="col-sm-3">
+      <!--<a href="php/quoteProcessor.php">-->
+        <img src="01.jpg" alt="header"/>
+        <button type="submit" class="btn btn default" onclick="location.href='php/quoteProcessor.php';">Hello</button>
+        <input type="submit" class="button" name="insert" value="insert" />
+        <input type="submit" class="button" name="select" value="select" />
+    </div>
+    <div class="col-sm-3">
+      <a href="php/quoteProcessor.php">
+      <img src="02.jpg" alt="header"/>
+    
+    </div>
+    <div class="col-sm-3">
+      <img src="03.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="04.jpg" alt="header"/>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="02.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="01.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="04.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="03.jpg" alt="header"/>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="01.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="02.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="03.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="04.jpg" alt="header"/>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="01.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="02.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="03.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="04.jpg" alt="header"/>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="01.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="02.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="03.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="04.jpg" alt="header"/>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="01.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="02.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="03.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="04.jpg" alt="header"/>
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="01.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="02.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="02.jpg" alt="header"/>
+      
+    </div>
+    <div class="col-sm-3">
+      <img src="04.jpg" alt="header"/>
+      
+    </div>
+  </div>
 </div>
 
 </body>

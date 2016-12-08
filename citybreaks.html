@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TourHelper</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <a href=""><img src="vector.png" class="img-fluid" alt="Feedback Box" width="500"></a>
+</div>
+  
+<div class="container">
+  <!--form --> 
+  
+  <form method="post" action="php/feedbackProcessor.php">
+    
+    <div class="form-group">
+    <label for="departingid">Departing </label>
+    <input type = "text" id = "departingid" name="departingid" value = "14/12/2015" disabled/><br/>
+    </div>
+    
+    <div class="form-group">
+    <label for="returning-id">Returning </label>
+    <input type = "text" id = "returningid" name = "returningid" value = "16/12/2015" disabled/><br/>
+    </div>
+    
+    <div class="form-group">
+    <label for="duration-id">Duration </label>
+    <input type = "text" id = "durationid" name = "durationid" value = "3 Days" disabled/><br/>
+    </div>
+    
+    <div class="form-group">
+      <label for="hotel">Hotel </label>
+      <select class="custom-select" id="hotel" name="hotel">
+          <option value = "ibis">Ibis Amsterdam Centre: €119 pp</option>
+          <option value = "radisson">Radisson Blu Hotel: €228 pp</option>
+	        <option value = "novotel">Novotel Amsterdam City: €178 pp</option>
+      </select>
+     </div>
+    
+    <div class="form-group">
+      <label for="rooms">Rooms </label>
+      <label class="radio"><input type="radio" name="rooms" value="1">1 room</label>
+      <label class="radio"><input type="radio" name="rooms" value="2">2 rooms</label>
+      
+     </div>
+    
+    <div class="form-group">
+      <label for="beds">Beds </label>
+      <label class="radio"><input type="radio" name="beds" value="1">1 bed</label>
+      <label class="radio"><input type="radio" name="beds" value="2">2 beds</label>
+      
+     </div>
+    
+     <div class="form-group">
+      <label for="airline">Airline </label>
+        <select class="custom-select" id="airline" name="airline">
+          <option value="AL_2999">Aer Lingus: €29.99 pp</option>
+          <option value="R_1999">Ryanair: €19.99 pp</option>
+      </select>
+      </div>
+    
+   
+    <div class="form-group">
+      <label for="passengers">Passengers </label>
+      <select class="custom-select" id="passengers" name="passengers">
+          <option value = "one">1</option>
+          <option value = "two">2</option>
+	        <option value = "three">3</option>
+          <option value = "four">4</option>
+      </select>
+     </div>
+    
+    <input id="submit" name="submit" type="submit" value="Process Booking" class="btn btn-primary">
+</form>
+</div>
+
+</body>
+</html>

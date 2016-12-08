@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Feedback Box</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  
+  <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <div class="jumbotron text-center">
-  <a href=""><img src="FeedbackBox.svg" class="img-fluid" alt="Feedback Box" width="250"></a>
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
 </div>
   
 <div class="container">
   <center>
-    <h1> Thank you! </h1> 
-    <?php
+    
+<?php
+if (isset($_POST['action'])) {
+    switch ($_POST['action']) {
+        case 'insert':
+            insert();
+            break;
+        case 'select':
+            select();
+            break;
+    }
+}
 
-      $xml = simplexml_load_file("./data/quotes.xml") or die("ERROR: Cannot load quotes.xml.");
+function select() {
+    echo "The select function is called.";
+    exit;
+}
 
-     
+function insert() {
+    echo "The insert function is called.";
+    exit;
+}
+?>
+    
+    
 
-       echo $xml->quote[0] . "<br>";
-      ?>
-  
-      
-      
-      
-  
-
-
+    
   </center>
 </div>
 
 </body>
 </html>
-
-
-
