@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<quotes>
-  <roy>Have you tried turning it off and on again?</roy>
-  <roy>The button!</roy>
-</quotes>
+<calendar>
+  <date id=01>
+    <quote[0]>Festivus for the rest of us!</quote[0]>
+  </date>
+</calendar>

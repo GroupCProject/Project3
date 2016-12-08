@@ -15,20 +15,15 @@
 </div>
   
 <div class="container">
-  <!--form --> 
-  <form method="post" action="php/quoteProcessor.php">
-    
-    <div class="form-group">
-      <label for="module">Character: </label>
-      <select class="custom-select" id="module" name="module">
-          <option value="WAD">Roy</option>
-          <option value="AI">Moss</option>
-          <option value="BDA">Douglas</option>
-      </select>
-     </div>
-    
-    <input id="submit" name="submit" type="submit" value="Drop into Box" class="btn btn-primary">
-</form>
+ <?php
+
+      $xml = simplexml_load_file("./data/quotes.xml") or die("ERROR: Cannot load quotes.xml.");
+
+     
+
+       echo $xml->quote[0] . "<br>";
+      ?>
+  
 </div>
 
 </body>
